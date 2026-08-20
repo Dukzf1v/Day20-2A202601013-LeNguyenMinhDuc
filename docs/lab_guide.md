@@ -115,3 +115,12 @@ Mỗi nhóm trả lời 2 câu:
 
 1. Case nào nên dùng multi-agent? Vì sao?
 2. Case nào không nên dùng multi-agent? Vì sao?
+
+### Trả lời
+
+1. Nên dùng multi-agent cho nhiệm vụ nghiên cứu có thể tách thành các vai trò độc lập như
+   tìm nguồn, phân tích và kiểm chứng. Thiết kế này đáng dùng khi benchmark cho thấy chất lượng
+   hoặc độ bao phủ bằng chứng tăng đủ để bù chi phí và latency của các lần handoff.
+2. Không nên dùng multi-agent cho câu hỏi ngắn, tuyến tính, nhạy với latency hoặc khi
+   single-agent đạt chất lượng tương đương. Trong trường hợp đó, nhiều agent chỉ làm tăng token,
+   coordination overhead và rủi ro lỗi ở state transition mà không tạo thêm bằng chứng.

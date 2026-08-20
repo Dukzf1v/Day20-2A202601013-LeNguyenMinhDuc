@@ -1,0 +1,105 @@
+{
+  "query": "Compare single-agent and multi-agent architectures for complex research tasks",
+  "baseline": [
+    {
+      "name": "single_agent_baseline",
+      "attributes": {
+        "query": "Compare single-agent and multi-agent architectures for complex research tasks"
+      },
+      "duration_seconds": 0.167545299998892
+    }
+  ],
+  "multi_agent": [
+    {
+      "name": "supervisor",
+      "payload": {
+        "next": "researcher",
+        "iteration": 1
+      }
+    },
+    {
+      "name": "supervisor",
+      "attributes": {
+        "iteration": 0
+      },
+      "duration_seconds": 6.590000702999532e-05
+    },
+    {
+      "name": "researcher",
+      "payload": {
+        "sources": 5
+      }
+    },
+    {
+      "name": "researcher",
+      "attributes": {
+        "query": "Compare single-agent and multi-agent architectures for complex research tasks"
+      },
+      "duration_seconds": 0.14894569999887608
+    },
+    {
+      "name": "supervisor",
+      "payload": {
+        "next": "analyst",
+        "iteration": 2
+      }
+    },
+    {
+      "name": "supervisor",
+      "attributes": {
+        "iteration": 1
+      },
+      "duration_seconds": 2.6399997295811772e-05
+    },
+    {
+      "name": "analyst",
+      "payload": {
+        "has_research": true
+      }
+    },
+    {
+      "name": "analyst",
+      "attributes": {
+        "query": "Compare single-agent and multi-agent architectures for complex research tasks"
+      },
+      "duration_seconds": 3.149999974993989e-05
+    },
+    {
+      "name": "supervisor",
+      "payload": {
+        "next": "writer",
+        "iteration": 3
+      }
+    },
+    {
+      "name": "supervisor",
+      "attributes": {
+        "iteration": 2
+      },
+      "duration_seconds": 9.10000380827114e-06
+    },
+    {
+      "name": "writer",
+      "payload": {
+        "answer_length": 1161
+      }
+    },
+    {
+      "name": "writer",
+      "attributes": {
+        "query": "Compare single-agent and multi-agent architectures for complex research tasks"
+      },
+      "duration_seconds": 0.00025289999757660553
+    },
+    {
+      "name": "workflow_complete",
+      "payload": {
+        "routes": [
+          "researcher",
+          "analyst",
+          "writer"
+        ]
+      }
+    }
+  ]
+}
